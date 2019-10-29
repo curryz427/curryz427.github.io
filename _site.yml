@@ -1,13 +1,22 @@
-name: "Yay internet!"
+name: "Yi Zhu"
 output_dir: "."
 navbar:
   title: "Home"
+  left:  
+    - text: "Blog"
+      href: Blog.html
+    - text: Resume
+      href: http://www.baige.me/v?i=SVT
+    - text: Project
+      href: http://www.baige.me/v?i=SVg
   right:
-    - text: "About"
-      href: about.html
     - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
+      href: mailto:<yiz4003@med.cornell.edu>
     - icon: fa-github fa-lg
-      href: http://github.com/<YOUR_GH_NAME>/
+      href: http://github.com/curryz427/
+    - icon: fa-twitter fa-lg 
+      href: https://twitter.com/YiZhu60259370 
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/yi-zhu-a564a2195/
 output:
   html_document
