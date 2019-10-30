@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This blog aims at introducing the "ggplot2" package and showing the power using "ggplot2" to achieve visualization. As John Tukey says, “The greatest value of a picture is when it forces us to notice what we never expected to see.”. In this blog, I will show you how to use "ggplot2" to make pictures and how to interpret the pictures.
 
-In this blog, I use NHANES data --- ""nhgh.tsv", which is downloaded from http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets, to show visualization and interpretation.
+In this blog, I use NHANES data --- ""nhgh.tsv", which is downloaded from http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets, to show visualizations and interpretations.
 ```{r}
 library(tidyverse)
 library(ggplot2)
@@ -72,7 +72,7 @@ data %>% # use data
 
 In this scatterplot, we can see different individuals' gylcohemoglobin level and BMI. Most points lie in the lower left corner, which means they have relatively low level of gylcohemoglobin and BMI. But it seems the comparison is not so clear. So, we decide to use color of points to strengthen the effect of contrast.
 
-Now, we use make a scatterplot of gylcohemoglobin versus BMI colored by insulin use.
+Now, we use "geom_point" to make a scatterplot of gylcohemoglobin versus BMI colored by insulin use.
 ```{r}
 data %>% # use data
   mutate(tx = fct_recode(factor(tx), `No insulin` = "0", Insulin = "1")) %>% # redefine tx (the insulin use)
@@ -102,9 +102,9 @@ data %>% # use data
        fill = "BMI") # change labs and title
 ```
 
-From this bar chart, we can see that the BMI distribution is different across racial groups. Among Mexican Americans, there are more obese and more overweight patients than patients with normal BMI. Among non-hispanic black patients, the number of obese patients are greater than the number of normal BMI patients. For other hispanic patients, the distribution of normal, obese, and overweight patients are quite similar. For other race including multi-racial patients, there are more patients with normal BMI than obese or overweight patients.
+From this bar chart, we can see that the BMI distribution is different across racial groups. Among Mexican Americans, there are more obese and more overweight patients than individuals with normal BMI. Among non-hispanic black patients, the number of obese individuals are greater than the number of normal BMI individuals. For other hispanic patients, the distribution of normal, obese, and overweight patients are quite similar. For other race including multi-racial patients, there are more patients with normal BMI than obese or overweight patients.
 
 ## Conclusion
 
-From this blog, we hope you can find the power of ggplot2 and study some techniques to help you interpret the data. GGplot2 is really a useful tool and we still need to explore it.
+From this blog, we hope you can find the power of ggplot2 and study some techniques to help you interpret the data. ggplot2 is really a useful tool and we still need to explore it.
 
